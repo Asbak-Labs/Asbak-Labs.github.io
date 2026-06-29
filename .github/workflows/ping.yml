@@ -38,6 +38,11 @@ jobs:
           STATUS: ${{ github.event.client_payload.status }}
         run: node scripts/record-ping.mjs
 
+      # Regenerate status.json immediately so the page reflects this ping
+      # within seconds, instead of waiting for the scheduled check.
+      - name: Refresh status
+        run: node scripts/check.mjs
+
       - name: Commit heartbeat
         env:
           MONITOR: ${{ github.event.client_payload.monitor }}
