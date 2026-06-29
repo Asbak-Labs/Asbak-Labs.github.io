@@ -3,6 +3,10 @@
   'use strict';
 
   const REFRESH_MS = 60_000;
+  // Read data straight from the repo (always reflects the latest commit, ~5 min
+  // CDN cache) so the page never depends on a Pages redeploy to show fresh data.
+  const REPO = 'Asbak-Labs/Asbak-Labs.github.io';
+  const RAW = `https://raw.githubusercontent.com/${REPO}/main`;
   const $ = (id) => document.getElementById(id);
 
   const OVERALL = {
@@ -14,15 +18,42 @@
 
   async function load() {
     try {
-      const res = await fetch(`data/status.json?t=${Date.now()}`, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      render(await res.json());
+      const data = await fetchStatus();
+      await enrichLastPing(data);
+      render(data);
     } catch (err) {
       const hero = $('hero');
       hero.dataset.state = 'down';
       $('heroTitle').textContent = 'Could not load status';
       $('heroMeta').textContent = String(err.message || err);
     }
+  }
+
+  // Fetch status.json from raw (live), falling back to the Pages copy.
+  async function fetchStatus() {
+    try {
+      const r = await fetch(`${RAW}/data/status.json`, { cache: 'no-store' });
+      if (r.ok) return await r.json();
+    } catch { /* fall through */ }
+    const r2 = await fetch(`data/status.json?t=${Date.now()}`, { cache: 'no-store' });
+    if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
+    return await r2.json();
+  }
+
+  // Overlay each monitor's live heartbeat so "last ping" reflects the most
+  // recent ping, not just the snapshot taken at the last 10-minute check.
+  async function enrichLastPing(data) {
+    const monitors = Array.isArray(data.monitors) ? data.monitors : [];
+    await Promise.all(monitors.map(async (m) => {
+      try {
+        const r = await fetch(`${RAW}/data/heartbeats/${m.id}.json`, { cache: 'no-store' });
+        if (!r.ok) return;
+        const hb = await r.json();
+        if (hb.lastPing && (!m.lastPing || new Date(hb.lastPing) > new Date(m.lastPing))) {
+          m.lastPing = hb.lastPing;
+        }
+      } catch { /* ignore a single heartbeat miss */ }
+    }));
   }
 
   function render(data) {
