@@ -1,0 +1,55 @@
+name: Record ping
+
+# A monitor "pings" by sending a repository_dispatch event of type "ping":
+#
+#   curl -X POST https://api.github.com/repos/Asbak-Labs/Asbak-Labs.github.io/dispatches \
+#     -H "Accept: application/vnd.github+json" \
+#     -H "Authorization: token <PING_TOKEN>" \
+#     -d '{"event_type":"ping","client_payload":{"monitor":"my-server"}}'
+#
+# Optional client_payload fields: "name" (display name), "status" ("up"|"down").
+
+on:
+  repository_dispatch:
+    types: [ping]
+
+permissions:
+  contents: write
+
+# Serialise pings per-monitor so two pings from the SAME monitor don't race,
+# while pings from different monitors still run in parallel.
+concurrency:
+  group: ping-${{ github.event.client_payload.monitor }}
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Record heartbeat
+        env:
+          MONITOR: ${{ github.event.client_payload.monitor }}
+          NAME: ${{ github.event.client_payload.name }}
+          STATUS: ${{ github.event.client_payload.status }}
+        run: node scripts/record-ping.mjs
+
+      - name: Commit heartbeat
+        env:
+          MONITOR: ${{ github.event.client_payload.monitor }}
+        run: |
+          git config user.name "status-bot"
+          git config user.email "status-bot@users.noreply.github.com"
+          git add data/
+          git commit -m "ping: ${MONITOR}" || { echo "nothing to commit"; exit 0; }
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+            echo "push race, retrying ($i)..."
+            sleep $((RANDOM % 5 + 1))
+          done
+          echo "Failed to push after retries" >&2
+          exit 1

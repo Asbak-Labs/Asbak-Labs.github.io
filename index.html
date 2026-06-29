@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asbak Labs — System Status</title>
+  <meta name="description" content="Live system status and uptime for Asbak Labs." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%2330d158'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- ambient background -->
+  <div class="bg" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <span class="grain"></span>
+  </div>
+
+  <main class="shell">
+    <header class="masthead">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name" id="brandName">Asbak Labs</span>
+      </div>
+      <p class="brand-sub" id="brandSub">System Status</p>
+    </header>
+
+    <!-- overall status hero -->
+    <section class="hero glass" id="hero" data-state="loading">
+      <span class="hero-dot" id="heroDot"></span>
+      <div class="hero-text">
+        <h1 id="heroTitle">Checking status…</h1>
+        <p id="heroMeta">Loading the latest data</p>
+      </div>
+    </section>
+
+    <!-- monitors -->
+    <section class="monitors" id="monitors" aria-live="polite"></section>
+
+    <!-- empty / onboarding state -->
+    <section class="glass empty" id="empty" hidden>
+      <h2>No monitors yet</h2>
+      <p>Point any monitor at this page and it appears here automatically. Send a heartbeat every few minutes:</p>
+      <pre><code>curl -X POST https://api.github.com/repos/Asbak-Labs/Asbak-Labs.github.io/dispatches \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: token &lt;YOUR_PING_TOKEN&gt;" \
+  -d '{"event_type":"ping","client_payload":{"monitor":"my-server"}}'</code></pre>
+      <p class="empty-note">The next 10-minute check will flip it to <strong>Operational</strong>.</p>
+    </section>
+
+    <footer class="footer">
+      <span id="updated">—</span>
+      <span class="dot-sep">•</span>
+      <span>Checks every 10 min</span>
+      <span class="dot-sep">•</span>
+      <span>Powered by GitHub Actions &amp; Pages</span>
+    </footer>
+  </main>
+
+  <!-- tooltip for uptime bars -->
+  <div class="tip" id="tip" role="status" hidden></div>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
