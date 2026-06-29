@@ -90,6 +90,19 @@ down. You don't have to list a monitor here — it appears automatically once it
 
 ---
 
+## Discord alerts
+
+When the 10-minute check detects a monitor going **down** (no heartbeat within its grace
+window), it posts a Discord embed; it posts another when the monitor **recovers**. Alerts fire
+only on the *change*, so a monitor that stays down is not re-announced every 10 minutes.
+
+The webhook URL is stored as the repo **Actions secret** `DISCORD_WEBHOOK_URL` (never in code).
+To change it: *Repo → Settings → Secrets and variables → Actions → `DISCORD_WEBHOOK_URL`*.
+
+How fast a "down" alert fires = grace window + the next scheduled check. With the default
+25-minute grace, expect an alert ~25–35 minutes after the last successful ping. Lower
+`graceMinutes` in `monitors.json` for faster (but more sensitive) alerting.
+
 ## Maintenance
 
 - **Uptime math**: each 10-min check records up/down per monitor; daily buckets drive the 90-day

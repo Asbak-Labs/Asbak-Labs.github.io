@@ -12,6 +12,16 @@ const now = new Date();
 const nowIso = now.toISOString();
 const today = nowIso.slice(0, 10);
 
+// previous run's statuses, used to fire an alert only on a real up<->down change
+const prevStatus = {};
+if (existsSync('data/status.json')) {
+  try {
+    const prev = JSON.parse(readFileSync('data/status.json', 'utf8'));
+    for (const m of prev.monitors || []) prevStatus[m.id] = m.status;
+  } catch { /* ignore */ }
+}
+const alerts = [];
+
 // ---- config -------------------------------------------------------------
 let config = {};
 if (existsSync('monitors.json')) {
@@ -105,6 +115,14 @@ for (const id of [...ids].sort()) {
     uptime90d: uptime90d == null ? null : +uptime90d.toFixed(3),
     bars
   });
+
+  // detect a status transition since the previous check
+  const prev = prevStatus[id];
+  if (status === 'down' && prev !== undefined && prev !== 'down') {
+    alerts.push({ id, name, kind: 'down', lastPing: hb && hb.lastPing ? hb.lastPing : null });
+  } else if (status === 'up' && prev === 'down') {
+    alerts.push({ id, name, kind: 'up', lastPing: hb && hb.lastPing ? hb.lastPing : null });
+  }
 }
 
 // ---- overall ------------------------------------------------------------
@@ -122,3 +140,47 @@ const out = {
 };
 writeFileSync('data/status.json', JSON.stringify(out, null, 2) + '\n');
 console.log(`status.json updated: ${monitors.length} monitor(s), overall=${overall}.`);
+
+// ---- Discord alerts on status change ------------------------------------
+const webhook = process.env.DISCORD_WEBHOOK_URL;
+if (alerts.length && !webhook) {
+  console.log(`${alerts.length} status change(s) but DISCORD_WEBHOOK_URL is not set — skipping alerts.`);
+}
+for (const a of (webhook ? alerts : [])) {
+  try {
+    await sendDiscord(webhook, a, out.site);
+    console.log(`Discord ${a.kind} alert sent for ${a.id}.`);
+  } catch (e) {
+    console.error(`Discord alert failed for ${a.id}: ${e.message}`);
+  }
+}
+
+async function sendDiscord(url, a, site) {
+  const down = a.kind === 'down';
+  const fields = [
+    { name: 'Monitor', value: a.name || a.id, inline: true },
+    { name: 'Status', value: down ? '🔴 Down' : '🟢 Operational', inline: true },
+  ];
+  if (a.lastPing) {
+    const epoch = Math.floor(new Date(a.lastPing).getTime() / 1000);
+    fields.push({ name: 'Last heartbeat', value: `<t:${epoch}:R>`, inline: false });
+  }
+  const embed = {
+    title: down ? `🔴 ${a.name || a.id} is DOWN` : `🟢 ${a.name || a.id} has recovered`,
+    description: down
+      ? 'No heartbeat was received within the grace window.'
+      : 'A heartbeat was received again — the monitor is back up.',
+    color: down ? 0xed4245 : 0x57f287,
+    fields,
+    timestamp: nowIso,
+    footer: { text: 'Asbak Labs Status' },
+  };
+  if (site && site.url) embed.url = site.url;
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username: 'Asbak Labs Status', embeds: [embed] }),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} — ${await res.text()}`);
+}
