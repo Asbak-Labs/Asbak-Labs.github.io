@@ -8,11 +8,5 @@
     "periodMinutes": 10,
     "graceMinutes": 25
   },
-  "monitors": {
-    "example-service": {
-      "name": "Example Service",
-      "description": "Delete this and add your own — or just start pinging with any id.",
-      "graceMinutes": 25
-    }
-  }
+  "monitors": {}
 }
