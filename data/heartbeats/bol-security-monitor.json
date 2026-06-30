@@ -1,8 +1,8 @@
 {
   "id": "bol-security-monitor",
   "name": "Bol Security Monitor",
-  "lastPing": "2026-06-30T18:35:41.209Z",
+  "lastPing": "2026-06-30T18:40:43.775Z",
   "lastReportedStatus": "up",
   "firstSeen": "2026-06-29T14:28:05.809Z",
-  "pingCount": 341
+  "pingCount": 342
 }
