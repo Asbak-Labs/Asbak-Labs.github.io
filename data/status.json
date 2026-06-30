@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-30T13:28:05.815Z",
+  "generatedAt": "2026-06-30T16:07:15.883Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
     "url": "https://asbak-labs.github.io"
   },
-  "overall": "operational",
+  "overall": "degraded",
   "monitors": [
     {
       "id": "bol-security-monitor",
       "name": "Bol Security Monitor",
       "description": "",
       "status": "up",
-      "lastPing": "2026-06-30T13:25:02.121Z",
+      "lastPing": "2026-06-30T16:05:21.932Z",
       "uptime24h": 100,
       "uptime90d": 100,
       "bars": [
@@ -383,7 +383,7 @@
       "name": "Cardseekers Web API",
       "description": "",
       "status": "up",
-      "lastPing": "2026-06-30T13:26:01.714Z",
+      "lastPing": "2026-06-30T16:06:11.393Z",
       "uptime24h": 100,
       "uptime90d": 100,
       "bars": [
@@ -754,7 +754,7 @@
       "name": "Cardseekers Discord Bot",
       "description": "",
       "status": "up",
-      "lastPing": "2026-06-30T13:26:01.280Z",
+      "lastPing": "2026-06-30T16:06:08.882Z",
       "uptime24h": 100,
       "uptime90d": 100,
       "bars": [
@@ -1124,10 +1124,10 @@
       "id": "tcg-buyout-monitor",
       "name": "TCG Buy-out Monitor",
       "description": "",
-      "status": "up",
+      "status": "down",
       "lastPing": "2026-06-30T13:20:50.637Z",
-      "uptime24h": 50,
-      "uptime90d": 50,
+      "uptime24h": 33.333,
+      "uptime90d": 33.333,
       "bars": [
         {
           "date": "2026-04-02",
@@ -1487,7 +1487,7 @@
         },
         {
           "date": "2026-06-30",
-          "uptime": 50
+          "uptime": 33.33
         }
       ]
     }
