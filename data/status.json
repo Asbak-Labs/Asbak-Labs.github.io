@@ -1,25 +1,21 @@
 {
-  "generatedAt": "2026-07-02T23:47:06.651Z",
+  "generatedAt": "2026-07-03T01:20:22.802Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
     "url": "https://asbak-labs.github.io"
   },
-  "overall": "operational",
+  "overall": "degraded",
   "monitors": [
     {
       "id": "bol-security-monitor",
       "name": "Bol Security Monitor",
       "description": "",
-      "status": "up",
+      "status": "down",
       "lastPing": "2026-07-02T23:45:51.411Z",
-      "uptime24h": 100,
-      "uptime90d": 100,
+      "uptime24h": 97.727,
+      "uptime90d": 97.727,
       "bars": [
-        {
-          "date": "2026-04-04",
-          "uptime": null
-        },
         {
           "date": "2026-04-05",
           "uptime": null
@@ -375,6 +371,10 @@
         {
           "date": "2026-07-02",
           "uptime": 100
+        },
+        {
+          "date": "2026-07-03",
+          "uptime": 0
         }
       ]
     },
@@ -382,15 +382,11 @@
       "id": "cardseekers-api",
       "name": "Cardseekers Web API",
       "description": "",
-      "status": "up",
+      "status": "down",
       "lastPing": "2026-07-02T23:44:31.999Z",
-      "uptime24h": 100,
-      "uptime90d": 100,
+      "uptime24h": 96.875,
+      "uptime90d": 96.875,
       "bars": [
-        {
-          "date": "2026-04-04",
-          "uptime": null
-        },
         {
           "date": "2026-04-05",
           "uptime": null
@@ -746,6 +742,10 @@
         {
           "date": "2026-07-02",
           "uptime": 100
+        },
+        {
+          "date": "2026-07-03",
+          "uptime": 0
         }
       ]
     },
@@ -754,14 +754,10 @@
       "name": "Cardseekers Discord Bot",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-02T23:44:29.117Z",
+      "lastPing": "2026-07-03T01:17:19.839Z",
       "uptime24h": 100,
       "uptime90d": 100,
       "bars": [
-        {
-          "date": "2026-04-04",
-          "uptime": null
-        },
         {
           "date": "2026-04-05",
           "uptime": null
@@ -1117,6 +1113,10 @@
         {
           "date": "2026-07-02",
           "uptime": 100
+        },
+        {
+          "date": "2026-07-03",
+          "uptime": 100
         }
       ]
     },
@@ -1124,15 +1124,11 @@
       "id": "tcg-buyout-monitor",
       "name": "TCG Buy-out Monitor",
       "description": "",
-      "status": "up",
+      "status": "down",
       "lastPing": "2026-07-02T23:44:37.949Z",
-      "uptime24h": 6.897,
-      "uptime90d": 6.897,
+      "uptime24h": 6.667,
+      "uptime90d": 6.667,
       "bars": [
-        {
-          "date": "2026-04-04",
-          "uptime": null
-        },
         {
           "date": "2026-04-05",
           "uptime": null
@@ -1488,6 +1484,10 @@
         {
           "date": "2026-07-02",
           "uptime": 8.33
+        },
+        {
+          "date": "2026-07-03",
+          "uptime": 0
         }
       ]
     }
