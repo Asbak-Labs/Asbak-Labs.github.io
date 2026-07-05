@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T23:11:13.321Z",
+  "generatedAt": "2026-07-05T00:14:48.612Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -12,14 +12,10 @@
       "name": "Bol Security Monitor",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-04T23:06:19.200Z",
-      "uptime24h": 97.183,
-      "uptime90d": 97.183,
+      "lastPing": "2026-07-05T00:11:26.397Z",
+      "uptime24h": 97.222,
+      "uptime90d": 97.222,
       "bars": [
-        {
-          "date": "2026-04-06",
-          "uptime": null
-        },
         {
           "date": "2026-04-07",
           "uptime": null
@@ -374,6 +370,10 @@
         },
         {
           "date": "2026-07-04",
+          "uptime": 100
+        },
+        {
+          "date": "2026-07-05",
           "uptime": 100
         }
       ]
@@ -383,14 +383,10 @@
       "name": "Cardseekers Web API",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-04T23:09:16.651Z",
-      "uptime24h": 96.61,
-      "uptime90d": 96.61,
+      "lastPing": "2026-07-05T00:14:22.941Z",
+      "uptime24h": 96.667,
+      "uptime90d": 96.667,
       "bars": [
-        {
-          "date": "2026-04-06",
-          "uptime": null
-        },
         {
           "date": "2026-04-07",
           "uptime": null
@@ -745,6 +741,10 @@
         },
         {
           "date": "2026-07-04",
+          "uptime": 100
+        },
+        {
+          "date": "2026-07-05",
           "uptime": 100
         }
       ]
@@ -755,13 +755,9 @@
       "description": "",
       "status": "down",
       "lastPing": "2026-07-04T11:28:35.637Z",
-      "uptime24h": 83.051,
-      "uptime90d": 83.051,
+      "uptime24h": 81.667,
+      "uptime90d": 81.667,
       "bars": [
-        {
-          "date": "2026-04-06",
-          "uptime": null
-        },
         {
           "date": "2026-04-07",
           "uptime": null
@@ -1117,6 +1113,10 @@
         {
           "date": "2026-07-04",
           "uptime": 33.33
+        },
+        {
+          "date": "2026-07-05",
+          "uptime": 0
         }
       ]
     },
@@ -1126,13 +1126,9 @@
       "description": "",
       "status": "down",
       "lastPing": "2026-07-02T23:44:37.949Z",
-      "uptime24h": 3.509,
-      "uptime90d": 3.509,
+      "uptime24h": 3.448,
+      "uptime90d": 3.448,
       "bars": [
-        {
-          "date": "2026-04-06",
-          "uptime": null
-        },
         {
           "date": "2026-04-07",
           "uptime": null
@@ -1487,6 +1483,10 @@
         },
         {
           "date": "2026-07-04",
+          "uptime": 0
+        },
+        {
+          "date": "2026-07-05",
           "uptime": 0
         }
       ]
