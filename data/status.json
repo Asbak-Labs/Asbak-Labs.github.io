@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T01:26:14.362Z",
+  "generatedAt": "2026-07-06T05:55:15.898Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -12,9 +12,9 @@
       "name": "Bol Security Monitor",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-06T01:24:49.895Z",
-      "uptime24h": 97.701,
-      "uptime90d": 97.701,
+      "lastPing": "2026-07-06T05:50:32.352Z",
+      "uptime24h": 97.727,
+      "uptime90d": 97.727,
       "bars": [
         {
           "date": "2026-04-08",
@@ -383,9 +383,9 @@
       "name": "Cardseekers Web API",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-06T01:25:51.942Z",
-      "uptime24h": 97.333,
-      "uptime90d": 97.333,
+      "lastPing": "2026-07-06T05:51:12.191Z",
+      "uptime24h": 97.368,
+      "uptime90d": 97.368,
       "bars": [
         {
           "date": "2026-04-08",
@@ -755,8 +755,8 @@
       "description": "",
       "status": "down",
       "lastPing": "2026-07-04T11:28:35.637Z",
-      "uptime24h": 65.333,
-      "uptime90d": 65.333,
+      "uptime24h": 64.474,
+      "uptime90d": 64.474,
       "bars": [
         {
           "date": "2026-04-08",
@@ -1126,8 +1126,8 @@
       "description": "",
       "status": "down",
       "lastPing": "2026-07-02T23:44:37.949Z",
-      "uptime24h": 2.74,
-      "uptime90d": 2.74,
+      "uptime24h": 2.703,
+      "uptime90d": 2.703,
       "bars": [
         {
           "date": "2026-04-08",
