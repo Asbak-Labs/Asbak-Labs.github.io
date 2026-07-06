@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T10:10:26.658Z",
+  "generatedAt": "2026-07-06T14:03:24.800Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -12,9 +12,9 @@
       "name": "Bol Security Monitor",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-06T10:06:06.817Z",
-      "uptime24h": 97.753,
-      "uptime90d": 97.753,
+      "lastPing": "2026-07-06T14:01:43.787Z",
+      "uptime24h": 97.778,
+      "uptime90d": 97.778,
       "bars": [
         {
           "date": "2026-04-08",
@@ -382,10 +382,10 @@
       "id": "cardseekers-api",
       "name": "Cardseekers Web API",
       "description": "",
-      "status": "up",
-      "lastPing": "2026-07-06T10:06:26.629Z",
-      "uptime24h": 97.403,
-      "uptime90d": 97.403,
+      "status": "down",
+      "lastPing": "2026-07-06T10:11:26.965Z",
+      "uptime24h": 96.154,
+      "uptime90d": 96.154,
       "bars": [
         {
           "date": "2026-04-08",
@@ -745,7 +745,7 @@
         },
         {
           "date": "2026-07-06",
-          "uptime": 100
+          "uptime": 75
         }
       ]
     },
@@ -754,9 +754,9 @@
       "name": "Cardseekers Discord Bot",
       "description": "",
       "status": "down",
-      "lastPing": "2026-07-04T11:28:35.637Z",
-      "uptime24h": 63.636,
-      "uptime90d": 63.636,
+      "lastPing": "2026-07-06T10:48:17.841Z",
+      "uptime24h": 62.821,
+      "uptime90d": 62.821,
       "bars": [
         {
           "date": "2026-04-08",
@@ -1126,8 +1126,8 @@
       "description": "",
       "status": "down",
       "lastPing": "2026-07-02T23:44:37.949Z",
-      "uptime24h": 2.667,
-      "uptime90d": 2.667,
+      "uptime24h": 2.632,
+      "uptime90d": 2.632,
       "bars": [
         {
           "date": "2026-04-08",
