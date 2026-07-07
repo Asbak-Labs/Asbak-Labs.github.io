@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T22:55:18.556Z",
+  "generatedAt": "2026-07-07T22:56:50.171Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -13,8 +13,8 @@
       "description": "",
       "status": "up",
       "lastPing": "2026-07-07T22:55:18.536Z",
-      "uptime24h": 72.414,
-      "uptime90d": 91.87,
+      "uptime24h": 73.333,
+      "uptime90d": 91.935,
       "bars": [
         {
           "date": "2026-04-09",
@@ -374,7 +374,7 @@
         },
         {
           "date": "2026-07-07",
-          "uptime": 71.43
+          "uptime": 72.41
         }
       ]
     },
@@ -385,7 +385,7 @@
       "status": "down",
       "lastPing": "2026-07-06T10:11:26.965Z",
       "uptime24h": 0,
-      "uptime90d": 67.568,
+      "uptime90d": 66.964,
       "bars": [
         {
           "date": "2026-04-09",
@@ -755,8 +755,8 @@
       "description": "",
       "status": "down",
       "lastPing": "2026-07-07T22:04:05.498Z",
-      "uptime24h": 44.828,
-      "uptime90d": 55.856,
+      "uptime24h": 43.333,
+      "uptime90d": 55.357,
       "bars": [
         {
           "date": "2026-04-09",
@@ -1116,7 +1116,7 @@
         },
         {
           "date": "2026-07-07",
-          "uptime": 46.43
+          "uptime": 44.83
         }
       ]
     },
@@ -1127,7 +1127,7 @@
       "status": "down",
       "lastPing": "2026-07-02T23:44:37.949Z",
       "uptime24h": 0,
-      "uptime90d": 1.835,
+      "uptime90d": 1.818,
       "bars": [
         {
           "date": "2026-04-09",
