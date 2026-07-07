@@ -1,11 +1,12 @@
 // Evaluates every monitor and regenerates data/status.json.
-// Runs on a schedule (every 10 minutes) via .github/workflows/check.yml.
+// Runs on every incoming ping (.github/workflows/ping.yml) and on a
+// best-effort schedule (.github/workflows/check.yml) as a fallback.
 //
 // A monitor is "up" if it has pinged within its grace window, "down" if not
 // (or if it self-reported down), and "pending" if it has never pinged.
 // Per-monitor history is kept in data/history/<id>.json with two views:
 //   - days:   { "YYYY-MM-DD": { up, total } }  -> 90-day uptime bars
-//   - recent: [{ t, up }]  (last 144 checks ~= 24h) -> 24h uptime
+//   - recent: [{ t, up }]  (trailing 24h of checks) -> 24h uptime
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 
 const now = new Date();
@@ -79,8 +80,12 @@ for (const id of [...ids].sort()) {
     day.total += 1;
     hist.days[today] = day;
 
+    // checks run at an uneven cadence (every ping plus the cron fallback),
+    // so "recent" is a real 24h time window rather than a fixed sample count
     hist.recent.push({ t: nowIso, up });
-    if (hist.recent.length > 144) hist.recent = hist.recent.slice(-144);
+    const cutoff = now.getTime() - 24 * 60 * 60 * 1000;
+    hist.recent = hist.recent.filter(s => new Date(s.t).getTime() >= cutoff);
+    if (hist.recent.length > 2000) hist.recent = hist.recent.slice(-2000);
 
     // keep only the most recent 90 days
     const keys = Object.keys(hist.days).sort();

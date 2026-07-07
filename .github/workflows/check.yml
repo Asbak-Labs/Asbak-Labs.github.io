@@ -1,8 +1,13 @@
 name: Status check
 
+# FALLBACK ONLY. The status is normally refreshed by ping.yml on every
+# incoming heartbeat, since GitHub cron is best-effort and in practice fires
+# hours apart. This schedule matters only when NO monitor is pinging (so it is
+# what eventually flips everything to "down") — hence a "down" alert for the
+# last remaining monitor can still lag by however late the cron fires.
 on:
   schedule:
-    # Every 10 minutes. GitHub may delay scheduled runs under load.
+    # Nominally every 10 minutes; GitHub delays or drops runs under load.
     - cron: '*/10 * * * *'
   workflow_dispatch: {}
   push:

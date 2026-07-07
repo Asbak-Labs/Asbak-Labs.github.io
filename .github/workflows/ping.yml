@@ -31,23 +31,31 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Record heartbeat
+      # Record the heartbeat AND re-evaluate all monitors. Pings arrive far more
+      # reliably than GitHub's cron (which is best-effort and often hours late),
+      # so this keeps status.json fresh; the scheduled check.yml remains only as
+      # a fallback for when no monitor is pinging at all.
+      #
+      # Concurrent pings from different monitors edit the same files
+      # (status.json, history/), so on a push race the scripts are re-run from a
+      # clean checkout of the remote head instead of rebasing local commits.
+      - name: Record heartbeat and update status
         env:
           MONITOR: ${{ github.event.client_payload.monitor }}
           NAME: ${{ github.event.client_payload.name }}
           STATUS: ${{ github.event.client_payload.status }}
-        run: node scripts/record-ping.mjs
-
-      - name: Commit heartbeat
-        env:
-          MONITOR: ${{ github.event.client_payload.monitor }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           git config user.name "status-bot"
           git config user.email "status-bot@users.noreply.github.com"
-          git add data/
-          git commit -m "ping: ${MONITOR}" || { echo "nothing to commit"; exit 0; }
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+            node scripts/record-ping.mjs
+            node scripts/check.mjs
+            git add data/
+            git commit -m "ping: ${MONITOR}" || { echo "nothing to commit"; exit 0; }
+            git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
             echo "push race, retrying ($i)..."
             sleep $((RANDOM % 5 + 1))
           done
