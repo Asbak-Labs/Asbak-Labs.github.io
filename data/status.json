@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T12:48:18.200Z",
+  "generatedAt": "2026-07-08T12:52:34.580Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -12,9 +12,9 @@
       "name": "Bol Security Monitor",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-08T12:47:30.914Z",
-      "uptime24h": 96.911,
-      "uptime90d": 97.207,
+      "lastPing": "2026-07-08T12:52:34.546Z",
+      "uptime24h": 96.923,
+      "uptime90d": 97.214,
       "bars": [
         {
           "date": "2026-04-10",
@@ -385,7 +385,7 @@
       "status": "down",
       "lastPing": "2026-07-06T10:11:26.965Z",
       "uptime24h": 0,
-      "uptime90d": 21.676,
+      "uptime90d": 21.614,
       "bars": [
         {
           "date": "2026-04-10",
@@ -755,8 +755,8 @@
       "description": "",
       "status": "up",
       "lastPing": "2026-07-08T12:48:18.165Z",
-      "uptime24h": 53.282,
-      "uptime90d": 54.046,
+      "uptime24h": 53.462,
+      "uptime90d": 54.179,
       "bars": [
         {
           "date": "2026-04-10",
@@ -1116,7 +1116,7 @@
         },
         {
           "date": "2026-07-08",
-          "uptime": 56.56
+          "uptime": 56.76
         }
       ]
     },
@@ -1127,7 +1127,7 @@
       "status": "down",
       "lastPing": "2026-07-02T23:44:37.949Z",
       "uptime24h": 0,
-      "uptime90d": 0.581,
+      "uptime90d": 0.58,
       "bars": [
         {
           "date": "2026-04-10",
