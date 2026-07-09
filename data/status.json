@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T16:22:04.918Z",
+  "generatedAt": "2026-07-09T16:25:14.372Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -14,7 +14,7 @@
       "status": "up",
       "lastPing": "2026-07-09T16:22:04.882Z",
       "uptime24h": 100,
-      "uptime90d": 99.018,
+      "uptime90d": 99.019,
       "bars": [
         {
           "date": "2026-04-11",
@@ -385,7 +385,7 @@
       "status": "down",
       "lastPing": "2026-07-06T10:11:26.965Z",
       "uptime24h": 0,
-      "uptime90d": 7.455,
+      "uptime90d": 7.448,
       "bars": [
         {
           "date": "2026-04-11",
@@ -754,9 +754,9 @@
       "name": "Cardseekers Discord Bot",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-09T16:20:15.976Z",
+      "lastPing": "2026-07-09T16:25:14.338Z",
       "uptime24h": 100,
-      "uptime90d": 84.195,
+      "uptime90d": 84.211,
       "bars": [
         {
           "date": "2026-04-11",
