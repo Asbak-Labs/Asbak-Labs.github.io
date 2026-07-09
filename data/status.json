@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T23:59:25.933Z",
+  "generatedAt": "2026-07-09T00:04:09.268Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -14,12 +14,8 @@
       "status": "up",
       "lastPing": "2026-07-08T23:59:25.901Z",
       "uptime24h": 100,
-      "uptime90d": 98.423,
+      "uptime90d": 98.425,
       "bars": [
-        {
-          "date": "2026-04-10",
-          "uptime": null
-        },
         {
           "date": "2026-04-11",
           "uptime": null
@@ -375,6 +371,10 @@
         {
           "date": "2026-07-08",
           "uptime": 100
+        },
+        {
+          "date": "2026-07-09",
+          "uptime": 100
         }
       ]
     },
@@ -385,12 +385,8 @@
       "status": "down",
       "lastPing": "2026-07-06T10:11:26.965Z",
       "uptime24h": 0,
-      "uptime90d": 12.058,
+      "uptime90d": 12.039,
       "bars": [
-        {
-          "date": "2026-04-10",
-          "uptime": null
-        },
         {
           "date": "2026-04-11",
           "uptime": null
@@ -746,6 +742,10 @@
         {
           "date": "2026-07-08",
           "uptime": 0
+        },
+        {
+          "date": "2026-07-09",
+          "uptime": 0
         }
       ]
     },
@@ -754,14 +754,10 @@
       "name": "Cardseekers Discord Bot",
       "description": "",
       "status": "up",
-      "lastPing": "2026-07-08T23:59:07.110Z",
-      "uptime24h": 80.684,
-      "uptime90d": 74.437,
+      "lastPing": "2026-07-09T00:04:09.234Z",
+      "uptime24h": 80.885,
+      "uptime90d": 74.478,
       "bars": [
-        {
-          "date": "2026-04-10",
-          "uptime": null
-        },
         {
           "date": "2026-04-11",
           "uptime": null
@@ -1117,6 +1113,10 @@
         {
           "date": "2026-07-08",
           "uptime": 80.68
+        },
+        {
+          "date": "2026-07-09",
+          "uptime": 100
         }
       ]
     },
@@ -1127,12 +1127,8 @@
       "status": "down",
       "lastPing": "2026-07-02T23:44:37.949Z",
       "uptime24h": 0,
-      "uptime90d": 0.323,
+      "uptime90d": 0.322,
       "bars": [
-        {
-          "date": "2026-04-10",
-          "uptime": null
-        },
         {
           "date": "2026-04-11",
           "uptime": null
@@ -1487,6 +1483,10 @@
         },
         {
           "date": "2026-07-08",
+          "uptime": 0
+        },
+        {
+          "date": "2026-07-09",
           "uptime": 0
         }
       ]
