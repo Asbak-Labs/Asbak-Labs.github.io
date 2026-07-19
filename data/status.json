@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T23:08:36.159Z",
+  "generatedAt": "2026-07-19T00:07:11.049Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -14,12 +14,8 @@
       "status": "down",
       "lastPing": "2026-07-17T13:04:20.927Z",
       "uptime24h": 0,
-      "uptime90d": 98.906,
+      "uptime90d": 98.877,
       "bars": [
-        {
-          "date": "2026-04-20",
-          "uptime": null
-        },
         {
           "date": "2026-04-21",
           "uptime": null
@@ -375,6 +371,10 @@
         {
           "date": "2026-07-18",
           "uptime": 0
+        },
+        {
+          "date": "2026-07-19",
+          "uptime": 0
         }
       ]
     },
@@ -387,10 +387,6 @@
       "uptime24h": 0,
       "uptime90d": 2.369,
       "bars": [
-        {
-          "date": "2026-04-20",
-          "uptime": null
-        },
         {
           "date": "2026-04-21",
           "uptime": null
@@ -746,6 +742,10 @@
         {
           "date": "2026-07-18",
           "uptime": 0
+        },
+        {
+          "date": "2026-07-19",
+          "uptime": 0
         }
       ]
     },
@@ -756,12 +756,8 @@
       "status": "down",
       "lastPing": "2026-07-14T20:38:24.382Z",
       "uptime24h": 0,
-      "uptime90d": 28.287,
+      "uptime90d": 28.278,
       "bars": [
-        {
-          "date": "2026-04-20",
-          "uptime": null
-        },
         {
           "date": "2026-04-21",
           "uptime": null
@@ -1117,6 +1113,10 @@
         {
           "date": "2026-07-18",
           "uptime": 0
+        },
+        {
+          "date": "2026-07-19",
+          "uptime": 0
         }
       ]
     },
@@ -1129,10 +1129,6 @@
       "uptime24h": 0,
       "uptime90d": 0.058,
       "bars": [
-        {
-          "date": "2026-04-20",
-          "uptime": null
-        },
         {
           "date": "2026-04-21",
           "uptime": null
@@ -1487,6 +1483,10 @@
         },
         {
           "date": "2026-07-18",
+          "uptime": 0
+        },
+        {
+          "date": "2026-07-19",
           "uptime": 0
         }
       ]
