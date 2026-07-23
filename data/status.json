@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-23T18:12:07.336Z",
+  "generatedAt": "2026-07-23T19:36:07.186Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
     "url": "https://asbak-labs.github.io"
   },
-  "overall": "down",
+  "overall": "degraded",
   "monitors": [
     {
       "id": "bol-security-monitor",
       "name": "Bol Security Monitor",
       "description": "",
-      "status": "down",
-      "lastPing": "2026-07-17T13:04:20.927Z",
-      "uptime24h": 0,
-      "uptime90d": 97.061,
+      "status": "up",
+      "lastPing": "2026-07-23T19:36:07.156Z",
+      "uptime24h": 6.667,
+      "uptime90d": 97.062,
       "bars": [
         {
           "date": "2026-04-25",
@@ -374,7 +374,7 @@
         },
         {
           "date": "2026-07-23",
-          "uptime": 0
+          "uptime": 10
         }
       ]
     },
@@ -385,7 +385,7 @@
       "status": "down",
       "lastPing": "2026-07-14T20:38:22.685Z",
       "uptime24h": 0,
-      "uptime90d": 2.325,
+      "uptime90d": 2.324,
       "bars": [
         {
           "date": "2026-04-25",
@@ -756,7 +756,7 @@
       "status": "down",
       "lastPing": "2026-07-14T20:38:24.382Z",
       "uptime24h": 0,
-      "uptime90d": 27.757,
+      "uptime90d": 27.749,
       "bars": [
         {
           "date": "2026-04-25",
