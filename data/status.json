@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T23:38:15.937Z",
+  "generatedAt": "2026-07-26T01:12:53.302Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -14,12 +14,8 @@
       "status": "down",
       "lastPing": "2026-07-24T17:53:44.633Z",
       "uptime24h": 0,
-      "uptime90d": 96.72,
+      "uptime90d": 96.695,
       "bars": [
-        {
-          "date": "2026-04-27",
-          "uptime": null
-        },
         {
           "date": "2026-04-28",
           "uptime": null
@@ -375,6 +371,10 @@
         {
           "date": "2026-07-25",
           "uptime": 0
+        },
+        {
+          "date": "2026-07-26",
+          "uptime": 0
         }
       ]
     },
@@ -385,12 +385,8 @@
       "status": "down",
       "lastPing": "2026-07-14T20:38:22.685Z",
       "uptime24h": 0,
-      "uptime90d": 2.141,
+      "uptime90d": 2.14,
       "bars": [
-        {
-          "date": "2026-04-27",
-          "uptime": null
-        },
         {
           "date": "2026-04-28",
           "uptime": null
@@ -746,6 +742,10 @@
         {
           "date": "2026-07-25",
           "uptime": 0
+        },
+        {
+          "date": "2026-07-26",
+          "uptime": 0
         }
       ]
     },
@@ -756,12 +756,8 @@
       "status": "down",
       "lastPing": "2026-07-14T20:38:24.382Z",
       "uptime24h": 0,
-      "uptime90d": 25.561,
+      "uptime90d": 25.555,
       "bars": [
-        {
-          "date": "2026-04-27",
-          "uptime": null
-        },
         {
           "date": "2026-04-28",
           "uptime": null
@@ -1117,6 +1113,10 @@
         {
           "date": "2026-07-25",
           "uptime": 0
+        },
+        {
+          "date": "2026-07-26",
+          "uptime": 0
         }
       ]
     },
@@ -1129,10 +1129,6 @@
       "uptime24h": 0,
       "uptime90d": 0.052,
       "bars": [
-        {
-          "date": "2026-04-27",
-          "uptime": null
-        },
         {
           "date": "2026-04-28",
           "uptime": null
@@ -1487,6 +1483,10 @@
         },
         {
           "date": "2026-07-25",
+          "uptime": 0
+        },
+        {
+          "date": "2026-07-26",
           "uptime": 0
         }
       ]
