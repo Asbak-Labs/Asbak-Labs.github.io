@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T17:26:47.970Z",
+  "generatedAt": "2026-08-25T17:55:51.320Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -14,7 +14,7 @@
       "status": "down",
       "lastPing": "2026-07-24T17:53:44.633Z",
       "uptime24h": 0,
-      "uptime90d": 79.862,
+      "uptime90d": 79.845,
       "bars": [
         {
           "date": "2026-05-28",
@@ -385,7 +385,7 @@
       "status": "down",
       "lastPing": "2026-07-14T20:38:22.685Z",
       "uptime24h": 0,
-      "uptime90d": 1.767,
+      "uptime90d": 1.766,
       "bars": [
         {
           "date": "2026-05-28",
@@ -756,7 +756,7 @@
       "status": "down",
       "lastPing": "2026-07-27T12:32:03.253Z",
       "uptime24h": 0,
-      "uptime90d": 21.116,
+      "uptime90d": 21.112,
       "bars": [
         {
           "date": "2026-05-28",
