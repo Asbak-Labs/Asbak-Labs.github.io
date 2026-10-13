@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T20:49:18.754Z",
+  "generatedAt": "2026-10-13T02:15:57.603Z",
   "site": {
     "title": "Asbak Labs",
     "subtitle": "System Status",
@@ -14,12 +14,8 @@
       "status": "down",
       "lastPing": "2026-07-24T17:53:44.633Z",
       "uptime24h": 0,
-      "uptime90d": 45.875,
+      "uptime90d": 37.638,
       "bars": [
-        {
-          "date": "2026-07-15",
-          "uptime": 100
-        },
         {
           "date": "2026-07-16",
           "uptime": 100
@@ -375,6 +371,10 @@
         {
           "date": "2026-10-12",
           "uptime": 0
+        },
+        {
+          "date": "2026-10-13",
+          "uptime": 0
         }
       ]
     },
@@ -387,10 +387,6 @@
       "uptime24h": 0,
       "uptime90d": 0,
       "bars": [
-        {
-          "date": "2026-07-15",
-          "uptime": 0
-        },
         {
           "date": "2026-07-16",
           "uptime": 0
@@ -746,6 +742,10 @@
         {
           "date": "2026-10-12",
           "uptime": 0
+        },
+        {
+          "date": "2026-10-13",
+          "uptime": 0
         }
       ]
     },
@@ -756,12 +756,8 @@
       "status": "down",
       "lastPing": "2026-07-27T12:32:03.253Z",
       "uptime24h": 0,
-      "uptime90d": 0.044,
+      "uptime90d": 0.05,
       "bars": [
-        {
-          "date": "2026-07-15",
-          "uptime": 0
-        },
         {
           "date": "2026-07-16",
           "uptime": 0
@@ -1117,6 +1113,10 @@
         {
           "date": "2026-10-12",
           "uptime": 0
+        },
+        {
+          "date": "2026-10-13",
+          "uptime": 0
         }
       ]
     },
@@ -1129,10 +1129,6 @@
       "uptime24h": 0,
       "uptime90d": 0,
       "bars": [
-        {
-          "date": "2026-07-15",
-          "uptime": 0
-        },
         {
           "date": "2026-07-16",
           "uptime": 0
@@ -1487,6 +1483,10 @@
         },
         {
           "date": "2026-10-12",
+          "uptime": 0
+        },
+        {
+          "date": "2026-10-13",
           "uptime": 0
         }
       ]
